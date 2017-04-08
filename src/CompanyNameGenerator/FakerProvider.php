@@ -12,6 +12,6 @@ class FakerProvider extends \Faker\Provider\Base
 
     public function companyName()
     {
-        return implode(' ', static::randomElements(static::$terms, 3));
+        return implode(' ', $this->unique()->randomElements(static::$terms, 3));
     }
 }
